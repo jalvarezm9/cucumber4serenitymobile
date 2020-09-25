@@ -1,4 +1,4 @@
-package training.home2.pages.common;
+package training.home2.pages.menuOperations;
 
 import net.serenitybdd.core.pages.PageObject;
 

@@ -7,14 +7,14 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Steps;
 
 import org.openqa.selenium.support.FindBy;
-import training.home2.util.Utilities;
+import training.home2.util.GeneralUtilities;
 
 import java.util.List;
 
 public class TravelPage extends PageObject {
 
     @Steps
-    private Utilities util;
+    private GeneralUtilities gutil;
 
     @AndroidFindBy(id = "android:id/action_bar_title")
     private WebElementFacade title;
@@ -72,6 +72,6 @@ public class TravelPage extends PageObject {
     }
 
     public void selectTarjeta(String value) {
-        util.selectItemOfListWhithCountLimit(listaTarjetas,value);
+        gutil.selectItemOfListWhithCountLimit(listaTarjetas,value);
     }
 }

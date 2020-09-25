@@ -23,4 +23,6 @@ public class ConfirmacionStepDef {
     public void seleccionaElBotonConfirmar() {
         confirmationPage.pressConfirmButton();
     }
+
+
 }

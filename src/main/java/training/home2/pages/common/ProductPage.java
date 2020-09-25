@@ -9,9 +9,7 @@ import net.thucydides.core.annotations.Steps;
 import org.openqa.selenium.support.FindBy;
 import training.home2.util.AndroidUtilities;
 import training.home2.util.GeneralUtilities;
-import training.home2.util.Utilities;
 
-import java.time.Duration;
 import java.util.List;
 
 public class ProductPage extends PageObject {
@@ -21,9 +19,6 @@ public class ProductPage extends PageObject {
 
     @Steps
     GeneralUtilities gutil;
-
-    @Steps
-    Utilities util;
 
     @iOSXCUITFindBy(id = "Productos")
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@resource-id='android:id/action_bar']//android.widget.TextView[@text='Productos']")
@@ -71,7 +66,7 @@ public class ProductPage extends PageObject {
     public void sendAccountNumberIBK(String accountNumber){
         txtAccountNumber.click();
         txtAccountNumber.sendKeys(accountNumber);
-        util.hideKeyboard();
+        gutil.hideKeyboard();
     }
 
     public void selectDestinationAccountType(String tipoCuentaDestinoIbk){
@@ -85,7 +80,7 @@ public class ProductPage extends PageObject {
     public void sendNumberCCI(String nrocci){
         txtNumberCCI.click();
         txtNumberCCI.sendKeys(nrocci);
-        util.hideKeyboard();
+        gutil.hideKeyboard();
     }
 
 }

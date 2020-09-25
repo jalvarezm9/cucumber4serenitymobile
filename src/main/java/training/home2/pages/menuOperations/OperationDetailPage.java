@@ -1,11 +1,11 @@
-package training.home2.pages.common;
+package training.home2.pages.menuOperations;
 
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Steps;
 import training.home2.util.AndroidUtilities;
-import training.home2.util.Utilities;
+import training.home2.util.GeneralUtilities;
 
 import static training.home2.util.Plataforma.*;
 
@@ -15,9 +15,9 @@ public class OperationDetailPage extends PageObject {
     AndroidUtilities autil;
 
     @Steps
-    Utilities util;
+    GeneralUtilities gutil;
 
-    @AndroidFindBy(id= "edtAmount")
+    @AndroidFindBy(xpath = "//android.widget.EditText[@resource-id='pe.com.interbank.mobilebanking.test:id/edtAmount'] | //android.widget.EditText[@resource-id='pe.com.interbank.mobilebanking.test:id/etAmountPayment']")
     private WebElementFacade txtAmount;
 
     @AndroidFindBy(xpath = "//android.widget.Button[@text='Siguiente']")
@@ -37,7 +37,7 @@ public class OperationDetailPage extends PageObject {
             monto = monto.replace(".","");
         }
         txtAmount.sendKeys(monto);
-        util.hideKeyboard();
+        gutil.hideKeyboard();
     }
 
     public void pressNextButton(){

@@ -2,7 +2,7 @@ package training.home.stepdefinitions;
 
 import io.cucumber.java.es.Y;
 import net.thucydides.core.annotations.Steps;
-import training.home2.pages.common.OperationDetailPage;
+import training.home2.pages.menuOperations.OperationDetailPage;
 
 public class OperationDetailStepDef {
 

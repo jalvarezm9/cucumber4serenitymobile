@@ -6,15 +6,11 @@ import net.serenitybdd.core.pages.PageObject;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.annotations.Steps;
 import training.home2.util.GeneralUtilities;
-import training.home2.util.Utilities;
 
 public class ConfirmationPage extends PageObject {
 
     @Steps
     GeneralUtilities gutil;
-
-    @Steps
-    Utilities util;
 
     @AndroidFindBy(xpath = "//android.view.ViewGroup[@resource-id='android:id/action_bar']//android.widget.TextView[@text='Confirmación']")
     private WebElementFacade tituloConfirmacion;
@@ -42,7 +38,7 @@ public class ConfirmationPage extends PageObject {
     private void enterValueOn(WebElementFacade webElement, String value) {
         webElement.click();
         webElement.type(value);
-        util.hideKeyboard();
+        gutil.hideKeyboard();
     }
 
     public void tryConfirmationCustomerTrip(String email, String movil){

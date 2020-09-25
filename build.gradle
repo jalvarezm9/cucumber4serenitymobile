@@ -73,7 +73,6 @@ task iosJC(type: Test) {
     systemProperties['appium.udid'] = '4c4aaedee1e2906b06e02a16e0e070e057c9ba7e'
     systemProperties['appium.xcodeOrgId'] = '9699H5Y845'
     systemProperties['appium.xcodeSigningId'] = 'iPhone Developer'
-
     testLogging.showStandardStreams = true
     include "training/home/TestRunner.class"
 }
